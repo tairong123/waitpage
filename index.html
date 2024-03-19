@@ -37,7 +37,7 @@
         height:0;
         flex-grow:1;
         width:100%;
-        max-width: 500px;
+        max-width: 400px;
         background-position: bottom;
         background-size: contain;
         background-repeat: no-repeat;
@@ -46,8 +46,8 @@
         color:white;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: black;
-        font-weight:900;
-        font-size:60px;
+        font-weight:600;
+        font-size:40px;
         font-family: 'Nunito', sans-serif;
         word-wrap: break-word;
     }
@@ -60,13 +60,38 @@
             -webkit-text-stroke-width: 1.5px;
         }
     }
+    .progress-container {
+        width: 50%;
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .progress-bar {
+        height: 100%;
+        background-color: #21b9ff;
+        border-radius: 10px;
+        animation: progress 180s linear;
+    }
+
+    @keyframes progress {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 100%;
+        }
+    }
 </style>
 <BODY>
 <img class="title" src="img/logo.png" alt="logo">
-<h1>等待掛號中請稍等</h1>
-<img class="wait-img" src="img/hospital.png" alt="hospital">
-<h1>點選查看<br><a href="https://reurl.cc/eLKkyx" target="_blank">看診進度</a>.</h1>
-
+<div class="progress-container">
+    <div class="progress-bar"></div>
+</div>
+<h1>等待掛號中請稍等...</h1>
+<img class="wait-img" src="img/wait.png" alt="hospital">
+<h1>點選查看<a href="https://reurl.cc/eLKkyx" target="_blank">看診進度</a></h1>
+<h2>若有緊急情況，請致電 <a href="tel:+8864223592525">04 2359 2525</a></h2>
 
 </BODY>
 </HTML>
